@@ -61,15 +61,6 @@ export const schoolData = {
     { name: "ජේ.ඩී.එස්.ආර්.දිසානායක මෙනෙවිය", img: "/profile 2.png" }
   ],
 
-  anthem: {
-    title: "School Anthem",
-    verses: [
-      "ශ්‍රී රාහුල විද්‍යාලේ,\nදැනුමෙන් ජය ගනිමු,\nඅපේ ගුරු දෙවිවරු,\nදිනෙන් දින හොඳ දෙමු.",
-      "ශිෂ්‍යයෙක් ලෙස හැමදා,\nදිරිවත් ලෙස ඉදිරියෙ,\nජාතිය ගොඩ නගන්නට,\nදිරිවත් ලෙස ඉදිරියෙ.",
-      "ජය ශ්‍රී රාහුල,\nශ්‍රේෂ්ඨ ශ්‍රී රාහුල,\nතෝ හා ගෙවෙනු දිනේ,\nලෝකෙ සිරිය දිනේ.",
-    ],
-  },
-
   gallery: [
     { url:"/picture 1.png" },
     { url:"/picture 2.png" },
@@ -90,9 +81,4 @@ export const schoolData = {
     { url:"/picture 18.jpg" },
     { url:"/picture 19.jpg" },
   ],
-
-  flagInfo: {
-    title:       "School Flag",
-    description: "The Navy Blue and Gold colours of R/ Sri Rahula Maha Vidyalaya carry deep meaning. Navy Blue represents knowledge, wisdom and the boundless pursuit of learning — like the deep ocean. Gold represents the shining achievements, success and bright futures of every student. Together they symbolize that through knowledge, our students achieve greatness.",
-  },
 };

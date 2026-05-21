@@ -17,14 +17,7 @@ const features = [
   { icon: faStar,     label:'Co-Curriculars',        desc:'Sports, arts, music and cultural activities' },
 ];
 
-const milestones = [
-  { year:'1959', event:'School founded with a small group of students and teachers in Lellopitiya' },
-  { year:'1979', event:'Upgraded to National School status by the Ministry of Education' },
-  { year:'1999', event:'Expansion with new buildings for secondary & advanced levels' },
-  { year:'2012', event:'New science laboratory and ICT center officially opened' },
-  { year:'2020', event:'Over 3,000 students enrolled; 25+ national competition awards' },
-  { year:'2025', event:'Modern hybrid learning centers and digital classrooms introduced' },
-];
+
 
 export default function About() {
   return (
@@ -89,52 +82,6 @@ export default function About() {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Timeline */}
-      <section className="inner-section">
-        <div className="container">
-          <Reveal className="text-center mb-5">
-            <div className="section-badge">📅 Our Journey</div>
-            <h2 className="section-title">Milestones & Achievements</h2>
-            <div className="divider-line mx-auto"/>
-          </Reveal>
-          <div className="timeline">
-            {milestones.map((m,i)=>(
-              <Reveal key={i} className={`timeline-item ${i%2===0?'':'right'}`} delay={i*0.1}>
-                <div className="timeline-content">
-                  <div className="timeline-year">{m.year}</div>
-                  <p>{m.event}</p>
-                </div>
-                <div className="timeline-dot"/>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Principal */}
-      <section className="inner-section bg-primary-custom">
-        <div className="container">
-          <Reveal>
-            <div className="principal-card">
-              <div className="row align-items-center g-5">
-                <div className="col-md-3 text-center">
-                  <div className="principal-img-wrap">
-                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop" alt="Principal"/>
-                  </div>
-                </div>
-                <div className="col-md-9">
-                  <div className="quote-icon">"</div>
-                  <p className="principal-quote">The guiding philosophy of our school is that the right education can transform the lives of youth — to produce young citizens of character, who will in turn guide the fates of their respective societies, nations and of the world.</p>
-                  <div className="principal-name">H. A. Prematilaka</div>
-                  <div className="principal-title">Principal, R/ Sri Rahula Maha Vidyalaya</div>
-                </div>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-    </div>
+      </section>    </div>
   );
 }

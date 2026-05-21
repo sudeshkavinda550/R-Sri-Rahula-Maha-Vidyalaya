@@ -381,6 +381,13 @@ img { max-width:100%; display:block; }
   align-items:center;
   overflow:hidden;
 }
+.hero-bg-slide {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
 .hero-bg {
   position: absolute;
   inset: 0;
@@ -1205,8 +1212,9 @@ img { max-width:100%; display:block; }
 
 @media (max-width:992px) {
   :root { --nav-height:68px; }
-  .hero-section { min-height:auto; padding:80px 0 60px; }
+  .hero-section { min-height:80vh; padding:120px 0 80px; display:flex; align-items:center; }
   .hero-bg { background-attachment:scroll; }
+  .hero-bg-slide { background-position: center 30%; }
   .page-header { min-height:260px; }
   .page-header .page-header-overlay { background-attachment:scroll; }
   .about-img-secondary,.about-year-badge { display:none; }

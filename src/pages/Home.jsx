@@ -86,12 +86,9 @@ export default function Home() {
         {heroImages.map((img, index) => (
           <div
             key={index}
+            className="hero-bg-slide"
             style={{
-              position: 'absolute',
-              top: 0, left: 0, right: 0, bottom: 0,
               backgroundImage: `url('${process.env.PUBLIC_URL + img}')`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
               opacity: currentBg === index ? 1 : 0, // sequential pop-up effect
               transform: currentBg === index ? 'scale(1.05)' : 'scale(1)',
               transition: 'opacity 1.5s ease-in-out, transform 4s ease-in-out', // professional cross-fade
@@ -99,7 +96,7 @@ export default function Home() {
             }}
           />
         ))}
-
+ 
         {/* Black Opacity Overlay for Text Readability - Keep dark gradient overlay */}
         <div style={{
           position: 'absolute',
@@ -107,7 +104,7 @@ export default function Home() {
           background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85))',
           zIndex: 1
         }} />
-
+ 
         <div className="container hero-content" style={{ zIndex: 3, position: 'relative' }}>
           <div className="row align-items-center g-5">
             {/* Entrance Animations Updated for "left side open animation" of text content */}
@@ -115,13 +112,13 @@ export default function Home() {
               <div className="hero-badge animate-fade-down">ශ්‍රී ලංකාවේ අභිමානය</div>
               
               <h1 className="hero-title animate-fade-left">
-                <span className="hero-sinhala" style={{ display: 'block', fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: '800', lineHeight: 1.2 }}>
+                <span className="hero-sinhala" style={{ display: 'block', fontSize: 'clamp(2.1rem, 5vw, 4rem)', fontWeight: '800', lineHeight: 1.2 }}>
                   {schoolData.name}
                 </span>
               </h1>
               
-              <p className="hero-subtitle animate-fade-left delay-2" style={{ fontSize: '1.15rem', lineHeight: '1.8', color: '#e0e0e0' }}>
-                දශක ගණනාවක් පුරා විශිෂ්ට අධ්‍යාපනයක් ලබා දෙමින්, අනාගත පරපුරේ ජීවිත සාර්ථකත්වයට මඟ පෙන්වන ශ්‍රී ලංකාවේ අභිමානවත් ජාතික පාසලයි. යහපත් චරිතයකින් යුතු, කුසලතා පිරිපුන් පුරවැසියන් බිහිකිරීම අපගේ පරමාර්ථයයි.
+              <p className="hero-subtitle animate-fade-left delay-2" style={{ fontSize: 'clamp(0.95rem, 3vw, 1.1rem)', lineHeight: '1.8', color: '#e0e0e0' }}>
+                දශක ගණනාවක් පුරා විශිෂ්ට අධ්‍යාපනයක් ලබා දෙමින්, අනාගත පරපුරේ ජීවිත සාර්ථකත්වයට මඟ පෙන්වන ර/ශ්‍රී රාහුල මහා විද්‍යාලයයි. යහපත් චරිතයකින් යුතු, කුසලතා පිරිපුන් පුරවැසියන් බිහිකිරීම අපගේ පරමාර්ථයයි.
               </p>
               
               <div className="d-flex flex-wrap gap-3 animate-fade-up delay-3">
@@ -132,7 +129,7 @@ export default function Home() {
                   විද්‍යාලය ගැන
                 </Link>
               </div>
-
+ 
               <div className="hero-stats animate-fade-up delay-4">
                 <div className="row g-3">
                   {schoolData.stats.map((s, i) => (
