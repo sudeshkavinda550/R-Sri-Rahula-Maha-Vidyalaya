@@ -61,7 +61,7 @@ export default function Contact() {
               <div style={{ borderRadius: 12, overflow: 'hidden', marginTop: 16, height: 250, border: '1px solid rgba(255,255,255,0.15)', boxShadow: '0 8px 24px rgba(0,0,0,0.15)' }}>
                 <iframe
                   title="Google Map"
-                  src="https://maps.google.com/maps?q=R/%20Sri%20Rahula%20Maha%20Vidyalaya,%20Lellopitiya,%20Rathnapura&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  src="https://maps.google.com/maps?q=6.6647914,80.478333&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
