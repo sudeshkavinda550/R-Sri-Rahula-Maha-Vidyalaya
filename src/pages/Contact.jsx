@@ -61,7 +61,7 @@ export default function Contact() {
               <div style={{ borderRadius: 12, overflow: 'hidden', marginTop: 16, height: 250, border: '1px solid rgba(255,255,255,0.15)', boxShadow: '0 8px 24px rgba(0,0,0,0.15)' }}>
                 <iframe
                   title="Google Map"
-                  src="https://maps.google.com/maps?q=6.6647914,80.478333(ර/ශ්‍රී%20රාහුල%20මහා%20විද්‍යාලය)&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1014301.7759572023!2d79.68236769813073!3d6.7556679888833715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae39536368ef061%3A0x52748975e9720182!2sSri%20Rahula%20Maha%20Vidyalaya!5e0!3m2!1sen!2slk!4v1779419486242!5m2!1sen!2slk"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

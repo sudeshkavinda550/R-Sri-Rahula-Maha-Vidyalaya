@@ -146,11 +146,6 @@ export default function Home() {
             />
           ))}
         </div>
-
-        <div className="scroll-hint" onClick={(e) => { stopProp(e); document.getElementById('about-home')?.scrollIntoView({ behavior: 'smooth' }); }} style={{ zIndex: 3 }}>
-          <div className="scroll-hint-text">පහළට</div>
-          <div className="scroll-hint-wheel"><div className="scroll-hint-dot" /></div>
-        </div>
       </section>
 
       {/* ===== STATS BAR SECTION ===== */}
