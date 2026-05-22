@@ -264,9 +264,6 @@ export default function Gallery() {
         <div className="container">
           
           <Reveal className="text-center mb-5">
-            <div className="section-badge" style={{ display: 'inline-block', padding: '8px 16px', background: 'rgba(13, 110, 253, 0.1)', color: '#0d6efd', borderRadius: '50px', fontWeight: '600', marginBottom: '15px' }}>
-              අපේ මතකයන්
-            </div>
             <h2 className="section-title" style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: '800' }}>
               සුන්දර මතක සටහන්
             </h2>

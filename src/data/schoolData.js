@@ -12,9 +12,9 @@ export const schoolData = {
   principalMessage: "ශ්‍රී රාහුල මහා විද්‍යාලයේ අපගේ සිසුන් ශ්‍රී ලංකාවේ පොහොසත් සමාජ-සංස්කෘතික පරිසරය තුළ හැදී වැඩෙයි. අධ්‍යයන කටයුතු සහ විෂය සමගාමී ක්‍රියාකාරකම් අතර සමතුලිතතාවයක් අපි දිරිමත් කරන අතර, අපගේ සිසුන්ට අසංඛ්‍යාත අවස්ථාවන් සඳහා දොරටු විවර කරන ජාතික විෂයමාලා ධාරාවන් දෙකම අපි ලබා දෙන්නෙමු.",
 
   stats: [
-    { number:40,   suffix:"+", label:"Years of Service" },
-    { number:3500, suffix:"+", label:"Students Enrolled" },
-    { number:180,  suffix:"+", label:"Qualified Teachers" },
+    { number:60,   suffix:"+", label:"Years of Service" },
+    { number:1000, suffix:"+", label:"Students Enrolled" },
+    { number:40,  suffix:"+", label:"Qualified Teachers" },
     { number:25,   suffix:"+", label:"National Awards" },
   ],
 

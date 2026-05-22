@@ -52,25 +52,14 @@ export default function Staff() {
         bgImage="https://images.unsplash.com/photo-1544717305-2782549b5136?w=1600&h=700&fit=crop"
       />
 
-      {/* Background Image with Black Opacity Overlay */}
       <section 
-        className="inner-section" 
+        className="staff-header-bg inner-section"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/picture 13.jpg')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          padding: '60px 0',
-          color: '#ffffff',
-          minHeight: '60vh',
-          display: 'flex',
-          alignItems: 'center'
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('${process.env.PUBLIC_URL}/picture 13.jpg')`
         }}
       >
         <div className="container">
           <Reveal className="text-center mb-5">
-            <div className="section-badge" style={{ background: 'rgba(255,255,255,0.2)', color: '#fff' }}>
-              ගුරු මණ්ඩලය
-            </div>
             {/* Responsive Title */}
             <h2 className="section-title" style={{ color: '#ffffff', fontSize: 'clamp(1.8rem, 5vw, 2.5rem)' }}>
               අපගේ ප්‍රවීණ ආචාර්ය මණ්ඩලය

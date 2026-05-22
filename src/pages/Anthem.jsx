@@ -38,7 +38,6 @@ export default function Anthem() {
         <div style={{ position: 'absolute', inset: 0, background: "url(\"data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3C/g%3E%3C/svg%3E\")" }} />
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div className="text-center mb-5">
-            <div className="section-badge section-badge-light">🎵 School Anthem</div>
             <h2 className="section-title section-title-light">විද්‍යාලයීය ගීතය</h2>
             <div className="divider-line mx-auto" />
           </div>

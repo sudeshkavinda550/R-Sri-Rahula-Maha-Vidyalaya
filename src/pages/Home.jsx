@@ -81,7 +81,6 @@ export default function Home() {
         onClick={handleHeroClick} // click mouse event changes image
         style={{ cursor: 'pointer', position: 'relative', overflow: 'hidden' }}
       >
-        
         {/* Animated Background Slideshow with professional fade-in transition */}
         {heroImages.map((img, index) => (
           <div
@@ -90,26 +89,25 @@ export default function Home() {
             style={{
               backgroundImage: `url('${process.env.PUBLIC_URL + img}')`,
               opacity: currentBg === index ? 1 : 0, // sequential pop-up effect
-              transform: currentBg === index ? 'scale(1.05)' : 'scale(1)',
-              transition: 'opacity 1.5s ease-in-out, transform 4s ease-in-out', // professional cross-fade
+              transform: currentBg === index ? 'scale(1.03)' : 'scale(1)',
+              transition: 'opacity 1.5s ease-in-out, transform 4.5s ease-in-out', // professional cross-fade
               zIndex: 0
             }}
           />
         ))}
  
-        {/* Black Opacity Overlay for Text Readability - Keep dark gradient overlay */}
+        {/* Dark overlay for readability when background slideshow is active */}
         <div style={{
           position: 'absolute',
           top: 0, left: 0, right: 0, bottom: 0,
-          background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85))',
+          background: 'linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85))',
           zIndex: 1
         }} />
  
         <div className="container hero-content" style={{ zIndex: 3, position: 'relative' }}>
           <div className="row align-items-center g-5">
-            {/* Entrance Animations Updated for "left side open animation" of text content */}
-            <div className="col-lg-7 col-xl-6">
-              <div className="hero-badge animate-fade-down">ශ්‍රී ලංකාවේ අභිමානය</div>
+            {/* Hero Text Content */}
+            <div className="col-lg-7 col-xl-6 text-center text-lg-start">
               
               <h1 className="hero-title animate-fade-left">
                 <span className="hero-sinhala" style={{ display: 'block', fontSize: 'clamp(2.1rem, 5vw, 4rem)', fontWeight: '800', lineHeight: 1.2 }}>
@@ -189,9 +187,9 @@ export default function Home() {
         <div className="container">
           <div className="row align-items-center g-5">
             <RevealSection className="col-lg-5">
-              <div style={{ position: 'relative', paddingBottom: 36, paddingRight: 36 }}>
-                <img src="/IMG_0915.jpg" alt="School" className="about-img-main" />
-                <img src="/IMG_0889.jpg" alt="Students" className="about-img-secondary" />
+              <div className="about-img-multi">
+                <img src="/picture 7.png" alt="School" className="about-img-main" />
+                <img src="/picture 11.png" alt="Students" className="about-img-secondary" />
                 <div className="about-year-badge">
                   <div className="year">{schoolData.established}</div>
                   <div className="text">ආරම්භය</div>
@@ -199,7 +197,6 @@ export default function Home() {
               </div>
             </RevealSection>
             <RevealSection className="col-lg-7" delay={0.15}>
-              <div className="section-badge">අපගේ පාසල</div>
               <h2 className="section-title">{schoolData.name}</h2>
               <div className="divider-line" />
               <p className="body-text">{schoolData.principalMessage}</p>
@@ -219,7 +216,6 @@ export default function Home() {
       <section className="inner-section bg-light-custom">
         <div className="container">
           <RevealSection className="text-center mb-5">
-            <div className="section-badge">ගවේෂණය කරන්න</div>
             <h2 className="section-title">අපේ පාසල ගැන දැනගන්න</h2>
             <div className="divider-line mx-auto" />
             <p className="section-subtitle mx-auto">ර/ශ්‍රී රාහුල මහා විද්‍යාලය පිළිබඳව ඔබ දැනගත යුතු සියලුම තොරතුරු</p>

@@ -20,7 +20,6 @@ export default function Contact() {
     <section id="contact" className="contact-section">
       <div className="container">
         <div className="text-center mb-5" ref={ref} style={{ opacity: visible ? 1 : 0, transition: 'all 0.7s ease' }}>
-          <div className="section-badge">📞 සම්බන්ධ වන්න</div>
           <h2 className="section-title">අප හා සම්බන්ධ වන්න</h2>
           <div className="divider-line mx-auto" />
           <p className="section-subtitle">ඔබේ ප්‍රශ්නවලට හා ඇතුළත් වීමේ තොරතුරු සඳහා අප හා සම්බන්ධ වන්න</p>

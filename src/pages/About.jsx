@@ -35,8 +35,8 @@ export default function About() {
           <div className="row g-5 align-items-center">
             <Reveal className="col-lg-5" delay={0.05}>
               <div className="about-img-multi">
-                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&h=480&fit=crop" alt="School" className="about-img-main"/>
-                <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=260&h=200&fit=crop"    alt="Students" className="about-img-secondary"/>
+                <img src="/picture 7.png" alt="School" className="about-img-main"/>
+                <img src="/picture 11.png"    alt="Students" className="about-img-secondary"/>
                 <div className="about-year-badge">
                   <div className="year">{schoolData.established}</div>
                   <div className="text">Est.</div>
@@ -44,7 +44,6 @@ export default function About() {
               </div>
             </Reveal>
             <Reveal className="col-lg-7" delay={0.15}>
-              <div className="section-badge">📖 Our Story</div>
               <h2 className="section-title">History of {schoolData.nameEn}</h2>
               <div className="divider-line"/>
               <p className="body-text">{schoolData.principalMessage}</p>
@@ -66,7 +65,6 @@ export default function About() {
       <section className="inner-section bg-light-custom">
         <div className="container">
           <Reveal className="text-center mb-5">
-            <div className="section-badge">⭐ Why Choose Us</div>
             <h2 className="section-title">What Makes Us Different</h2>
             <div className="divider-line mx-auto"/>
           </Reveal>
