@@ -57,12 +57,18 @@ export default function Contact() {
                   <p>{schoolData.website}</p>
                 </div>
               </div>
-              {/* Map embed placeholder */}
-              <div style={{ borderRadius: 12, overflow: 'hidden', marginTop: 8, height: 160, background: 'rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid rgba(255,255,255,0.15)' }}>
-                <div style={{ textAlign: 'center', color: 'rgba(255,255,255,0.5)' }}>
-                  <div style={{ fontSize: '2rem', marginBottom: 8 }}>🗺️</div>
-                  <div style={{ fontSize: '0.82rem' }}>Google Maps embed<br />vercel.json හෝ iframe කේතය එකතු කරන්න</div>
-                </div>
+              {/* Google Map Embed */}
+              <div style={{ borderRadius: 12, overflow: 'hidden', marginTop: 16, height: 250, border: '1px solid rgba(255,255,255,0.15)', boxShadow: '0 8px 24px rgba(0,0,0,0.15)' }}>
+                <iframe
+                  title="Google Map"
+                  src="https://maps.google.com/maps?q=R/%20Sri%20Rahula%20Maha%20Vidyalaya,%20Lellopitiya,%20Rathnapura&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
               </div>
             </div>
           </div>

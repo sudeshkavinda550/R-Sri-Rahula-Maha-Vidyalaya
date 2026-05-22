@@ -127,19 +127,6 @@ export default function Home() {
                   විද්‍යාලය ගැන
                 </Link>
               </div>
- 
-              <div className="hero-stats animate-fade-up delay-4">
-                <div className="row g-3">
-                  {schoolData.stats.map((s, i) => (
-                    <div key={i} className="col-6 col-sm-3">
-                      <div style={{ textAlign: 'center' }}>
-                        <div className="hero-stat-number"><Counter target={s.number} suffix={s.suffix} /></div>
-                        <div className="hero-stat-label">{s.label}</div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
           </div>
         </div>
