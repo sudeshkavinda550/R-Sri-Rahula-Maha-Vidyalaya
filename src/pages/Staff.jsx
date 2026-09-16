@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PageHeader from '../components/PageHeader';
 import { schoolData } from '../data/schoolData';
+import { faUsers } from '@fortawesome/free-solid-svg-icons';
 import useReveal from '../hooks/useReveal';
 
 function Reveal({ children, className='', delay=0 }) {
@@ -50,6 +51,7 @@ export default function Staff() {
         subtitle="දිනපතා දරුවන්ගේ අනාගතය හැඩගස්වන අපගේ කැපවූ ගුරු මණ්ඩලය හඳුනාගන්න"
         breadcrumbs={[{ label: 'ආචාර්ය මණ්ඩලය' }]}
         bgImage="https://images.unsplash.com/photo-1544717305-2782549b5136?w=1600&h=700&fit=crop"
+        icon={faUsers}
       />
 
       <section 

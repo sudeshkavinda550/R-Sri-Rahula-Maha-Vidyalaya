@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PageHeader from '../components/PageHeader';
 import { schoolData } from '../data/schoolData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes, faChevronLeft, faChevronRight, faExpand } from '@fortawesome/free-solid-svg-icons';
+import { faTimes, faChevronLeft, faChevronRight, faExpand, faImages } from '@fortawesome/free-solid-svg-icons';
 import useReveal from '../hooks/useReveal';
 
 // Standard Reveal for Titles and Texts
@@ -62,6 +62,14 @@ export default function Gallery() {
             .pro-gallery-grid .col-span-2 { grid-column: span 2; }
             .pro-gallery-grid .row-span-2 { grid-row: span 2; }
             .pro-gallery-grid .row-span-2 img { height: 100%; }
+
+            .pro-gallery-grid .pro-gallery-item:nth-child(5n + 1),
+            .pro-gallery-grid .pro-gallery-item:nth-child(5n + 4) {
+              grid-row: span 2;
+            }
+            .pro-gallery-grid .pro-gallery-item:nth-child(5n + 2) {
+              grid-column: span 2;
+            }
           }
 
           /* Mobile adjustments */
@@ -258,6 +266,7 @@ export default function Gallery() {
         subtitle="අධ්‍යයන, ක්‍රීඩා, කලා සහ සංස්කෘතික සිදුවීම්වල සුන්දර මතකයන්"
         breadcrumbs={[{ label: 'Gallery' }]}
         bgImage="/school-bg.jpg"
+        icon={faImages}
       />
 
       <section className="inner-section" style={{ padding: '80px 0', backgroundColor: 'var(--light-bg, #f8f9fa)' }}>
@@ -281,20 +290,17 @@ export default function Gallery() {
                 className={`pro-gallery-item ${item.span || ''}`} 
                 onClick={() => setLb(i)}
                 style={{ 
-                  /* Dynamic CSS based on container visibility with a strict 1-second gap per image */
                   opacity: gridVisible ? 1 : 0, 
                   transform: gridVisible ? 'translateY(0)' : 'translateY(50px)',
-                  /* Change "1s" here if you want it faster (e.g., 0.3s or 0.5s) */
                   transition: `opacity 0.6s ease-out ${i * 0.1}s, transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) ${i * 0.1}s` 
                 }}
               >
-                <img src={item.url} alt={item.caption} loading="lazy" />
+                <img src={item.url} alt={item.caption || `පාසල් දර්ශනය ${i + 1}`} loading="lazy" />
                 
-                <div className="pro-gallery-overlay">
+                <div className="pro-gallery-overlay" aria-hidden="true">
                   <div className="pro-zoom-icon">
                     <FontAwesomeIcon icon={faExpand} />
                   </div>
-                  <div className="pro-caption">{item.caption}</div>
                 </div>
               </div>
             ))}
@@ -327,11 +333,6 @@ export default function Gallery() {
             onClick={(e) => e.stopPropagation()} 
           />
           
-          <div className="pro-lightbox-info" onClick={(e) => e.stopPropagation()}>
-            <h4>{schoolData.gallery[lb].caption}</h4>
-            <span>{lb + 1} / {schoolData.gallery.length}</span>
-          </div>
-
         </div>
       )}
     </div>

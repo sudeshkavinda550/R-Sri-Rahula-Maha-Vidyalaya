@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
-export default function PageHeader({ title, subtitle, breadcrumbs = [], bgImage }) {
+export default function PageHeader({ title, subtitle, breadcrumbs = [], bgImage, icon }) {
   return (
     <div
       className="page-header"
@@ -23,7 +23,7 @@ export default function PageHeader({ title, subtitle, breadcrumbs = [], bgImage 
       <div className="container page-header-content">
         {/* Breadcrumb */}
         <nav className="page-breadcrumb animate-fade-down" aria-label="breadcrumb">
-          <Link to="/"><FontAwesomeIcon icon={faHome} /> Home</Link>
+          <Link to="/"><FontAwesomeIcon icon={faHome} /> මුල් පිටුව</Link>
           {breadcrumbs.map((b, i) => (
             <span key={i}>
               <FontAwesomeIcon icon={faChevronRight} className="bc-sep" />
@@ -32,8 +32,17 @@ export default function PageHeader({ title, subtitle, breadcrumbs = [], bgImage 
           ))}
         </nav>
 
-        <h1 className="page-header-title animate-fade-left">{title}</h1>
-        {subtitle && <p className="page-header-subtitle animate-fade-left delay-2">{subtitle}</p>}
+        <div className="page-header-main">
+          {icon && (
+            <div className="page-header-icon animate-fade-down">
+              <FontAwesomeIcon icon={icon} />
+            </div>
+          )}
+          <div>
+            <h1 className="page-header-title animate-fade-left">{title}</h1>
+            {subtitle && <p className="page-header-subtitle animate-fade-left delay-2">{subtitle}</p>}
+          </div>
+        </div>
         <div className="page-header-line animate-fade-up delay-3" />
       </div>
     </div>

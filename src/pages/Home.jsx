@@ -109,8 +109,8 @@ export default function Home() {
             {/* Hero Text Content */}
             <div className="col-lg-7 col-xl-6 text-center text-lg-start">
               
-              <h1 className="hero-title animate-fade-left">
-                <span className="hero-sinhala" style={{ display: 'block', fontSize: 'clamp(2.1rem, 5vw, 4rem)', fontWeight: '800', lineHeight: 1.2 }}>
+              <h1 className="hero-title hero-school-name animate-fade-left">
+                <span className="hero-sinhala">
                   {schoolData.name}
                 </span>
               </h1>

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import PageHeader from '../components/PageHeader';
 import { schoolData } from '../data/schoolData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt, faPhone, faEnvelope, faGlobe, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt, faPhone, faEnvelope, faGlobe, faPaperPlane, faAddressBook } from '@fortawesome/free-solid-svg-icons';
 import useReveal from '../hooks/useReveal';
 
 export default function Contact() {
@@ -17,104 +18,111 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="contact-section">
-      <div className="container">
-        <div className="text-center mb-5" ref={ref} style={{ opacity: visible ? 1 : 0, transition: 'all 0.7s ease' }}>
-          <h2 className="section-title">අප හා සම්බන්ධ වන්න</h2>
-          <div className="divider-line mx-auto" />
-          <p className="section-subtitle">ඔබේ ප්‍රශ්නවලට හා ඇතුළත් වීමේ තොරතුරු සඳහා අප හා සම්බන්ධ වන්න</p>
-        </div>
-        <div className="row g-4">
-          {/* Info */}
-          <div className="col-lg-5" style={{ opacity: visible ? 1 : 0, transform: visible ? 'none' : 'translateX(-30px)', transition: 'all 0.8s ease 0.2s' }}>
-            <div className="contact-info-card">
-              <h4 style={{ marginBottom: 30 }}>📍 සම්බන්ධ තොරතුරු</h4>
-              <div className="contact-info-item">
-                <div className="contact-icon"><FontAwesomeIcon icon={faMapMarkerAlt} /></div>
-                <div>
-                  <h6>ලිපිනය</h6>
-                  <p>{schoolData.address}</p>
-                </div>
-              </div>
-              <div className="contact-info-item">
-                <div className="contact-icon"><FontAwesomeIcon icon={faPhone} /></div>
-                <div>
-                  <h6>දුරකතන</h6>
-                  {schoolData.phones.map((p, i) => <p key={i}>{p}</p>)}
-                </div>
-              </div>
-              <div className="contact-info-item">
-                <div className="contact-icon"><FontAwesomeIcon icon={faEnvelope} /></div>
-                <div>
-                  <h6>විද්‍යුත් තැපෑල</h6>
-                  <p>{schoolData.email}</p>
-                </div>
-              </div>
-              <div className="contact-info-item">
-                <div className="contact-icon"><FontAwesomeIcon icon={faGlobe} /></div>
-                <div>
-                  <h6>වෙබ් අඩවිය</h6>
-                  <p>{schoolData.website}</p>
-                </div>
-              </div>
-              {/* Google Map Embed */}
-              <div style={{ borderRadius: 12, overflow: 'hidden', marginTop: 16, height: 250, border: '1px solid rgba(255,255,255,0.15)', boxShadow: '0 8px 24px rgba(0,0,0,0.15)' }}>
-                <iframe
-                  title="Google Map"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1014301.7759572023!2d79.68236769813073!3d6.7556679888833715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae39536368ef061%3A0x52748975e9720182!2sSri%20Rahula%20Maha%20Vidyalaya!5e0!3m2!1sen!2slk!4v1779419486242!5m2!1sen!2slk"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
-            </div>
-          </div>
+    <div className="page-transition">
+      <PageHeader
+        title="අපව අමතන්න"
+        subtitle="ඔබේ ප්‍රශ්න, ඉල්ලීම් හෝ විමසීම් සඳහා අප හා සම්බන්ධ වන්න"
+        breadcrumbs={[{ label: 'අපව අමතන්න' }]}
+        bgImage="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&h=700&fit=crop"
+        icon={faAddressBook}
+      />
 
-          {/* Form */}
-          <div className="col-lg-7" style={{ opacity: visible ? 1 : 0, transform: visible ? 'none' : 'translateX(30px)', transition: 'all 0.8s ease 0.3s' }}>
-            <div className="contact-form-card">
-              <h4 style={{ marginBottom: 24, color: 'var(--primary)' }}>✉️ පණිවිඩ යවන්න</h4>
-              {sent && (
-                <div style={{ background: '#d4edda', border: '1px solid #c3e6cb', borderRadius: 12, padding: '14px 20px', marginBottom: 20, color: '#155724', fontWeight: 500 }}>
-                  ✅ ඔබේ පණිවිඩය සාර්ථකව ලැබී ඇත. ඉක්මනින් ඔබ හා සම්බන්ධ වෙමු!
-                </div>
-              )}
-              <form onSubmit={handleSubmit}>
-                <div className="row g-3">
-                  <div className="col-md-6">
-                    <input className="form-control-custom" placeholder="ඔබේ නම *" required value={form.name} onChange={e => setForm({...form, name: e.target.value})} />
-                  </div>
-                  <div className="col-md-6">
-                    <input className="form-control-custom" type="email" placeholder="විද්‍යුත් ලිපිනය *" required value={form.email} onChange={e => setForm({...form, email: e.target.value})} />
-                  </div>
-                  <div className="col-md-6">
-                    <input className="form-control-custom" placeholder="දුරකතන අංකය" value={form.phone} onChange={e => setForm({...form, phone: e.target.value})} />
-                  </div>
-                  <div className="col-md-6">
-                    <select className="form-control-custom" style={{ cursor: 'pointer' }}>
-                      <option>ඇතුළත් වීම ගැන</option>
-                      <option>විෂය නිර්දේශ ගැන</option>
-                      <option>ගුරු රැකියා</option>
-                      <option>වෙනත්</option>
-                    </select>
-                  </div>
-                  <div className="col-12">
-                    <textarea className="form-control-custom" rows="5" placeholder="ඔබේ පණිවිඩය *" required value={form.message} onChange={e => setForm({...form, message: e.target.value})} style={{ resize: 'vertical' }} />
-                  </div>
-                  <div className="col-12">
-                    <button type="submit" className="btn-primary-custom w-100" style={{ justifyContent: 'center' }}>
-                      <FontAwesomeIcon icon={faPaperPlane} /> පණිවිඩ යවන්න
-                    </button>
+      <section id="contact" className="contact-section">
+        <div className="container">
+          <div className="text-center mb-5" ref={ref} style={{ opacity: visible ? 1 : 0, transition: 'all 0.7s ease' }}>
+            <h2 className="section-title">අප හා සම්බන්ධ වන්න</h2>
+            <div className="divider-line mx-auto" />
+            <p className="section-subtitle">ඔබේ ප්‍රශ්නවලට හා ඇතුළත් වීමේ තොරතුරු සඳහා අප හා සම්බන්ධ වන්න</p>
+          </div>
+          <div className="row g-4">
+            <div className="col-lg-5" style={{ opacity: visible ? 1 : 0, transform: visible ? 'none' : 'translateX(-30px)', transition: 'all 0.8s ease 0.2s' }}>
+              <div className="contact-info-card">
+                <h4 style={{ marginBottom: 30 }}>සම්බන්ධ තොරතුරු</h4>
+                <div className="contact-info-item">
+                  <div className="contact-icon"><FontAwesomeIcon icon={faMapMarkerAlt} /></div>
+                  <div>
+                    <h6>ලිපිනය</h6>
+                    <p>{schoolData.address}</p>
                   </div>
                 </div>
-              </form>
+                <div className="contact-info-item">
+                  <div className="contact-icon"><FontAwesomeIcon icon={faPhone} /></div>
+                  <div>
+                    <h6>දුරකතන</h6>
+                    {schoolData.phones.map((p, i) => <p key={i}>{p}</p>)}
+                  </div>
+                </div>
+                <div className="contact-info-item">
+                  <div className="contact-icon"><FontAwesomeIcon icon={faEnvelope} /></div>
+                  <div>
+                    <h6>විද්‍යුත් තැපෑල</h6>
+                    <p>{schoolData.email}</p>
+                  </div>
+                </div>
+                <div className="contact-info-item">
+                  <div className="contact-icon"><FontAwesomeIcon icon={faGlobe} /></div>
+                  <div>
+                    <h6>වෙබ් අඩවිය</h6>
+                    <p>{schoolData.website}</p>
+                  </div>
+                </div>
+                <div style={{ borderRadius: 12, overflow: 'hidden', marginTop: 16, height: 250, border: '1px solid rgba(255,255,255,0.15)', boxShadow: '0 8px 24px rgba(0,0,0,0.15)' }}>
+                  <iframe
+                    title="Google Map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1014301.7759572023!2d79.68236769813073!3d6.7556679888833715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae39536368ef061%3A0x52748975e9720182!2sSri%20Rahula%20Maha%20Vidyalaya!5e0!3m2!1sen!2slk!4v1779419486242!5m2!1sen!2slk"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-7" style={{ opacity: visible ? 1 : 0, transform: visible ? 'none' : 'translateX(30px)', transition: 'all 0.8s ease 0.3s' }}>
+              <div className="contact-form-card">
+                <h4 style={{ marginBottom: 24, color: 'var(--primary)' }}>✉️ පණිවිඩ යවන්න</h4>
+                {sent && (
+                  <div style={{ background: '#d4edda', border: '1px solid #c3e6cb', borderRadius: 12, padding: '14px 20px', marginBottom: 20, color: '#155724', fontWeight: 500 }}>
+                    ✅ ඔබේ පණිවිඩය සාර්ථකව ලැබී ඇත. ඉක්මනින් ඔබ හා සම්බන්ධ වෙමු!
+                  </div>
+                )}
+                <form onSubmit={handleSubmit}>
+                  <div className="row g-3">
+                    <div className="col-md-6">
+                      <input className="form-control-custom" placeholder="ඔබේ නම *" required value={form.name} onChange={e => setForm({...form, name: e.target.value})} />
+                    </div>
+                    <div className="col-md-6">
+                      <input className="form-control-custom" type="email" placeholder="විද්‍යුත් ලිපිනය *" required value={form.email} onChange={e => setForm({...form, email: e.target.value})} />
+                    </div>
+                    <div className="col-md-6">
+                      <input className="form-control-custom" placeholder="දුරකතන අංකය" value={form.phone} onChange={e => setForm({...form, phone: e.target.value})} />
+                    </div>
+                    <div className="col-md-6">
+                      <select className="form-control-custom" style={{ cursor: 'pointer' }}>
+                        <option>ඇතුළත් වීම ගැන</option>
+                        <option>විෂය නිර්දේශ ගැන</option>
+                        <option>ගුරු රැකියා</option>
+                        <option>වෙනත්</option>
+                      </select>
+                    </div>
+                    <div className="col-12">
+                      <textarea className="form-control-custom" rows="5" placeholder="ඔබේ පණිවිඩය *" required value={form.message} onChange={e => setForm({...form, message: e.target.value})} style={{ resize: 'vertical' }} />
+                    </div>
+                    <div className="col-12">
+                      <button type="submit" className="btn-primary-custom w-100" style={{ justifyContent: 'center' }}>
+                        <FontAwesomeIcon icon={faPaperPlane} /> පණිවිඩ යවන්න
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }

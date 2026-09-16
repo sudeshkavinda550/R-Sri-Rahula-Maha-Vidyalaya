@@ -2,7 +2,7 @@ import React from 'react';
 import PageHeader from '../components/PageHeader';
 import { schoolData } from '../data/schoolData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBookOpen, faTrophy, faUsers, faStar, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import { faBookOpen, faTrophy, faUsers, faStar, faSchool } from '@fortawesome/free-solid-svg-icons';
 import useReveal from '../hooks/useReveal';
 
 function Reveal({ children, className='', delay=0 }) {
@@ -11,10 +11,10 @@ function Reveal({ children, className='', delay=0 }) {
 }
 
 const features = [
-  { icon: faBookOpen, label:'Quality Education',    desc:'Comprehensive curriculum designed for holistic development' },
-  { icon: faTrophy,   label:'National Achievements', desc:'Over 25+ national awards and recognitions' },
-  { icon: faUsers,    label:'Expert Faculty',        desc:'180+ dedicated and qualified teachers' },
-  { icon: faStar,     label:'Co-Curriculars',        desc:'Sports, arts, music and cultural activities' },
+  { icon: faBookOpen, label:'වසර 67ක විශ්වාසනීය අධ්‍යාපන මෙහෙවර', desc:'දශක හයකට වැඩි කාලයක අත්දැකීම් සහිතව 6 ශ්‍රේණියේ සිට 13 ශ්‍රේණිය දක්වා (සාමාන්‍ය පෙළ සහ උසස් පෙළ) සිසුන්ගේ අධ්‍යාපනික කටයුතු සාර්ථකව මෙහෙයවීම.' },
+  { icon: faTrophy, label:'උසස් පෙළ විෂය ධාරා', desc:'උසස් පෙළ අංශයේ විද්‍යා, කලා හා වාණිජ යන විෂය ධාරාවන්ගෙන් විශිෂ්ට කුසලතා දැක්වීමට අත්දැකීම් බහුල ආචාර්ය මණ්ඩලයක මගපෙන්වීම.' },
+  { icon: faStar, label:'බාහිර හා ක්‍රීඩා කටයුතු', desc:'අධ්‍යාපනයට මෙන්ම ක්‍රීඩා, නර්තන, සෞන්දර්යාත්මක හා සංස්කෘතික බාහිර ක්‍රියාකාරකම් සඳහා විශේෂ අවධානය යොමු කරමින් සිසුන්ගේ සහජ කුසලතා ඉහළ මට්ටමකට ගෙන ඒම.' },
+  { icon: faUsers, label:'ගුණධර්ම හා විනය', desc:'විද්‍යාලයීය පාරම්පරික අගයන් සුරකිමින් සිසුන්ගේ ශික්ෂණය, ආචාරධර්ම සහ සමාජීය වගකීම් වර්ධනය කිරීම.' },
 ];
 
 
@@ -23,10 +23,11 @@ export default function About() {
   return (
     <div className="page-transition">
       <PageHeader
-        title="About Our School"
-        subtitle="A legacy of educational excellence since 1959 — shaping Sri Lanka's future leaders"
-        breadcrumbs={[{ label:'About' }]}
+        title="පාසල ගැන"
+        subtitle="1959 සිට අධ්‍යාපන උසස්කම්වල උරුමයක් ඇති, ශ්‍රී ලංකාවේ අනාගත නායකයින් හැඩගැස්සීම"
+        breadcrumbs={[{ label:'පාසල ගැන' }]}
         bgImage="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1600&h=700&fit=crop"
+        icon={faSchool}
       />
 
       {/* Main About */}
@@ -39,23 +40,14 @@ export default function About() {
                 <img src="/picture 11.png"    alt="Students" className="about-img-secondary"/>
                 <div className="about-year-badge">
                   <div className="year">{schoolData.established}</div>
-                  <div className="text">Est.</div>
+                  <div className="text">ආරම්භය</div>
                 </div>
               </div>
             </Reveal>
             <Reveal className="col-lg-7" delay={0.15}>
-              <h2 className="section-title">History of {schoolData.nameEn}</h2>
+              <h2 className="section-title">{schoolData.name} ගැන</h2>
               <div className="divider-line"/>
-              <p className="body-text">{schoolData.principalMessage}</p>
-              <p className="body-text">Founded in 1959, R/ Sri Rahula Maha Vidyalaya started with a small group of students and teachers. Today, after more than six decades of dedicated service, we proudly serve over 3,500 students with a faculty of 180+ qualified teachers. Our commitment to academic excellence and holistic development has earned us recognition as one of the premier schools in the region.</p>
-              <div className="check-list">
-                {['National curriculum (O/L & A/L)','English medium instruction','International standard laboratories','Modern ICT & hybrid learning facilities','Rich co-curricular program'].map((item,i)=>(
-                  <div key={i} className="check-item">
-                    <FontAwesomeIcon icon={faCheckCircle} className="check-icon"/>
-                    {item}
-                  </div>
-                ))}
-              </div>
+              <p className="body-text">ශ්‍රී රාහුල මහා විද්‍යාලය යනු සබරගමුව පළාතේ, රත්නපුර දිස්ත්‍රික්කයේ ලෙල්ලොපිටිය ප්‍රදේශයේ පිහිටි අභිමානවත් රාජ්‍ය පාසලකි. වසර 67කට අධික දීර්ඝ හා ආඩම්බරකාරී ඉතිහාසයකට හිමිකම් කියන මෙම විද්‍යාලය, දශක හයකට වැඩි කාලයක් පුරා ප්‍රදේශයේ දරුවන් දහස් ගණනකට ගුණාත්මක අධ්‍යාපනයක් ලබා දෙමින් සමාජයට වැඩදායී ප්‍රගතිශීලී පුරවැසියන් දායාද කිරීමට කැපවී කටයුතු කරයි.</p>
             </Reveal>
           </div>
         </div>
@@ -65,7 +57,7 @@ export default function About() {
       <section className="inner-section bg-light-custom">
         <div className="container">
           <Reveal className="text-center mb-5">
-            <h2 className="section-title">What Makes Us Different</h2>
+            <h2 className="section-title">අපේ විශේෂත්වයන්</h2>
             <div className="divider-line mx-auto"/>
           </Reveal>
           <div className="row g-4">
@@ -80,6 +72,7 @@ export default function About() {
             ))}
           </div>
         </div>
-      </section>    </div>
+      </section>
+    </div>
   );
 }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PageHeader from '../components/PageHeader';
+import { faCompassDrafting } from '@fortawesome/free-solid-svg-icons';
 import useReveal from '../hooks/useReveal';
 
 function Reveal({ children, className='', delay=0 }) {
@@ -107,6 +108,7 @@ export default function VisionMission() {
         subtitle="ර/ශ්‍රී රාහුල මහා විද්‍යාලය"
         breadcrumbs={[{ label: 'දැක්ම සහ මෙහෙවර' }]}
         bgImage="https://images.unsplash.com/photo-1544717305-2782549b5136?w=1600&h=700&fit=crop"
+        icon={faCompassDrafting}
       />
 
       <section 
