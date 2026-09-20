@@ -1241,6 +1241,8 @@ img { max-width:100%; display:block; }
 /* =============================================
    CONTACT
    ============================================= */
+.contact-section { padding-top: 28px; }
+.contact-section .text-center { margin-bottom: 22px !important; }
 .contact-info-card {
   background:var(--gradient);
   border-radius:20px;
