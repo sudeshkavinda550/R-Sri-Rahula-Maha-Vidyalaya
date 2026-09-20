@@ -26,7 +26,7 @@ export default function About() {
         title="පාසල ගැන"
         subtitle="1959 සිට අධ්‍යාපන උසස්කම්වල උරුමයක් ඇති, ශ්‍රී ලංකාවේ අනාගත නායකයින් හැඩගැස්සීම"
         breadcrumbs={[{ label:'පාසල ගැන' }]}
-        bgImage="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1600&h=700&fit=crop"
+        bgImage="/img 5.jpg"
         icon={faSchool}
       />
 

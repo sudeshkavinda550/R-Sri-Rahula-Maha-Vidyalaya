@@ -8,7 +8,7 @@ export default function PageHeader({ title, subtitle, breadcrumbs = [], bgImage,
     <div
       className="page-header"
       style={bgImage ? {
-        backgroundImage: `url(${bgImage})`,
+        backgroundImage: `url("${bgImage}")`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',

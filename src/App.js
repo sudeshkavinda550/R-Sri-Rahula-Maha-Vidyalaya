@@ -12,6 +12,7 @@ import Staff        from './pages/Staff';
 import Gallery      from './pages/Gallery';
 import Anthem       from './pages/Anthem';
 import Contact      from './pages/Contact';
+import News         from './pages/News';
 
 function ScrollRestorer() {
   const location = useLocation();
@@ -33,6 +34,7 @@ function AppInner() {
           <Route path="/gallery"        element={<Gallery />} />
           <Route path="/anthem"         element={<Anthem />} />
           <Route path="/contact"        element={<Contact />} />
+          <Route path="/news"           element={<News />} />
           <Route path="*"               element={<Home />} />
         </Routes>
       </main>

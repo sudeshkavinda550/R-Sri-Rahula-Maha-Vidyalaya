@@ -23,7 +23,7 @@ export default function Contact() {
         title="අපව අමතන්න"
         subtitle="ඔබේ ප්‍රශ්න, ඉල්ලීම් හෝ විමසීම් සඳහා අප හා සම්බන්ධ වන්න"
         breadcrumbs={[{ label: 'අපව අමතන්න' }]}
-        bgImage="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&h=700&fit=crop"
+        bgImage="/img 1.jpg"
         icon={faAddressBook}
       />
 

@@ -108,18 +108,24 @@ export default function Home() {
           <div className="row align-items-center g-5">
             {/* Hero Text Content */}
             <div className="col-lg-7 col-xl-6 text-center text-lg-start">
-              
+              <div className="hero-overline animate-fade-down">1959 සිට අධ්‍යාපනයේ විශිෂ්ට ගමනක්</div>
               <h1 className="hero-title hero-school-name animate-fade-left">
                 <span className="hero-sinhala">
                   {schoolData.name}
                 </span>
               </h1>
               
-              <p className="hero-subtitle animate-fade-left delay-2" style={{ fontSize: 'clamp(0.95rem, 3vw, 1.1rem)', lineHeight: '1.8', color: '#e0e0e0' }}>
+              <p className="hero-subtitle hero-lead animate-fade-left delay-2">
                 දශක ගණනාවක් පුරා විශිෂ්ට අධ්‍යාපනයක් ලබා දෙමින්, අනාගත පරපුරේ ජීවිත සාර්ථකත්වයට මඟ පෙන්වන ර/ශ්‍රී රාහුල මහා විද්‍යාලයයි. යහපත් චරිතයකින් යුතු, කුසලතා පිරිපුන් පුරවැසියන් බිහිකිරීම අපගේ පරමාර්ථයයි.
               </p>
+
+              <div className="hero-proof-row animate-fade-up delay-3">
+                <div><strong>{schoolData.established}</strong><span>ආරම්භය</span></div>
+                <div><strong>1000+</strong><span>සිසුන්</span></div>
+                <div><strong>40+</strong><span>ගුරු මණ්ඩලය</span></div>
+              </div>
               
-              <div className="d-flex flex-wrap gap-3 animate-fade-up delay-3">
+              <div className="d-flex flex-wrap gap-3 hero-actions animate-fade-up delay-4">
                 <Link to="/contact" className="btn-primary-custom" onClick={stopProp}>
                   අපව අමතන්න
                 </Link>

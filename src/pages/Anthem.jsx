@@ -31,7 +31,7 @@ export default function Anthem() {
         title="පාසල් ගීතය"
         subtitle="ර/ශ්‍රී රාහුල මහා විද්‍යාලයේ අභිමානය"
         breadcrumbs={[{ label: 'පාසල් ගීතය' }]}
-        bgImage="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=1600&h=700&fit=crop"
+        bgImage="/img 2.jpg"
         icon={faMusic}
       />
 

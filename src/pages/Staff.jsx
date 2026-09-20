@@ -50,7 +50,7 @@ export default function Staff() {
         title="අපේ ආචාර්ය මණ්ඩලය"
         subtitle="දිනපතා දරුවන්ගේ අනාගතය හැඩගස්වන අපගේ කැපවූ ගුරු මණ්ඩලය හඳුනාගන්න"
         breadcrumbs={[{ label: 'ආචාර්ය මණ්ඩලය' }]}
-        bgImage="https://images.unsplash.com/photo-1544717305-2782549b5136?w=1600&h=700&fit=crop"
+        bgImage="/img 4.jpg"
         icon={faUsers}
       />
 

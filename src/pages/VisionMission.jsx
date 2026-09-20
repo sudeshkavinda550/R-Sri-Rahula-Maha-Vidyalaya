@@ -107,7 +107,7 @@ export default function VisionMission() {
         title="දැක්ම සහ මෙහෙවර"
         subtitle="ර/ශ්‍රී රාහුල මහා විද්‍යාලය"
         breadcrumbs={[{ label: 'දැක්ම සහ මෙහෙවර' }]}
-        bgImage="https://images.unsplash.com/photo-1544717305-2782549b5136?w=1600&h=700&fit=crop"
+        bgImage="/img 7.jpg"
         icon={faCompassDrafting}
       />
 

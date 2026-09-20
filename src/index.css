@@ -524,12 +524,28 @@ img { max-width:100%; display:block; }
   text-transform:uppercase;
   margin-bottom:24px;
 }
+.hero-overline {
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color:var(--secondary);
+  font-size:0.78rem;
+  font-weight:700;
+  letter-spacing:1.5px;
+  margin-bottom:18px;
+}
+.hero-overline::before {
+  content:'';
+  width:34px;
+  height:2px;
+  background:var(--secondary);
+}
 .hero-title {
   font-size:clamp(2.4rem,4.2vw,4.4rem);
   font-weight:900;
   color:var(--white-fixed, #fff);
   line-height:1.08;
-  margin-bottom:8px;
+  margin-bottom:28px;
   letter-spacing:-0.04em;
 }
 .hero-title .highlight {
@@ -555,6 +571,35 @@ img { max-width:100%; display:block; }
   line-height:1.7;
   max-width:620px;
 }
+.hero-lead {
+  max-width:700px;
+  color:rgba(255,255,255,0.84);
+  font-size:clamp(0.95rem, 1.5vw, 1.12rem);
+  line-height:1.9;
+  margin-bottom:26px;
+}
+.hero-proof-row {
+  display:flex;
+  align-items:stretch;
+  gap:0;
+  margin:0 0 30px;
+  max-width:560px;
+  border-top:1px solid rgba(255,255,255,0.2);
+  border-bottom:1px solid rgba(255,255,255,0.2);
+}
+.hero-proof-row > div {
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  padding:12px 22px 12px 0;
+  margin-right:22px;
+  border-right:1px solid rgba(255,255,255,0.2);
+}
+.hero-proof-row > div:last-child { border-right:0; margin-right:0; }
+.hero-proof-row strong { color:var(--secondary); font-family:'Playfair Display',serif; font-size:1.45rem; line-height:1; }
+.hero-proof-row span { color:rgba(255,255,255,0.68); font-size:0.76rem; }
+.hero-actions { margin-top:2px; }
 .hero-stats {
   margin-top:50px;
   padding-top:40px;
@@ -1244,7 +1289,10 @@ img { max-width:100%; display:block; }
 /* =============================================
    FOOTER
    ============================================= */
-.footer { background:var(--dark-bg); color:white; padding:80px 0 0; }
+.footer { background:linear-gradient(145deg,#081321 0%,#0d1b2a 55%,#111c2d 100%); color:white; padding:58px 0 0; position:relative; overflow:hidden; }
+.footer::before { content:''; position:absolute; width:360px; height:360px; right:-170px; top:-180px; border:1px solid rgba(200,169,81,0.15); border-radius:50%; box-shadow:0 0 0 28px rgba(200,169,81,0.03),0 0 0 56px rgba(200,169,81,0.025); }
+.footer-topline { display:flex; align-items:center; gap:10px; color:var(--secondary); text-transform:uppercase; letter-spacing:2px; font-size:0.68rem; font-weight:700; margin-bottom:32px; }
+.footer-topline-mark { width:34px; height:2px; background:var(--secondary); display:inline-block; }
 .footer-brand .school-name-footer {
   font-family:'Noto Sans Sinhala','Playfair Display',serif;
   font-size:1.38rem;
@@ -1274,13 +1322,13 @@ img { max-width:100%; display:block; }
   font-size:0.9rem;
   line-height:1.8;
   margin-top:18px;
-  max-width:420px;
+  max-width:440px;
 }
 .footer-heading {
   color:white;
   font-weight:700;
-  margin-bottom:20px;
-  font-size:1rem;
+  margin-bottom:22px;
+  font-size:1.05rem;
   letter-spacing:0.3px;
   font-family:'Noto Sans Sinhala', sans-serif;
 }
@@ -1361,13 +1409,24 @@ img { max-width:100%; display:block; }
   margin-right:8px; margin-top:4px;
 }
 .footer-social a:hover { background:var(--secondary); color:var(--primary-dark); transform:translateY(-4px); }
+.footer-contact-list { display:flex; flex-direction:column; gap:15px; }
+.footer-contact-row { display:flex; align-items:flex-start; gap:12px; color:rgba(255,255,255,0.62); font-size:0.82rem; line-height:1.7; }
+.footer-contact-row a { color:rgba(255,255,255,0.62); text-decoration:none; transition:var(--transition); }
+.footer-contact-row a:hover { color:var(--secondary); }
+.footer-contact-icon { width:30px; height:30px; flex:0 0 30px; display:flex; align-items:center; justify-content:center; border-radius:8px; background:rgba(200,169,81,0.12); color:var(--secondary); font-size:0.75rem; }
 .footer-divider { border-color:rgba(255,255,255,0.08) !important; margin-top:60px; }
 .footer-bottom {
-  padding:24px 0;
-  text-align:center;
-  color:rgba(255,255,255,0.38);
-  font-size:0.83rem;
+  border-top:1px solid rgba(255,255,255,0.09);
+  margin-top:48px;
+  padding:20px 0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+  color:rgba(255,255,255,0.42);
+  font-size:0.76rem;
 }
+.footer-bottom-dot { width:4px; height:4px; border-radius:50%; background:var(--secondary); }
 .footer-heart {
   color:var(--accent);
   margin-left:3px;
@@ -1488,9 +1547,19 @@ img { max-width:100%; display:block; }
   .hero-stat-number { font-size:1.6rem; }
   .admission-big-card { padding:28px 20px; }
   .contact-info-card,.contact-form-card { padding:28px 20px; }
-  .footer { padding-top:56px; }
+  .footer { padding-top:44px; }
+  .footer-topline { margin-bottom:26px; }
+  .footer-bottom { flex-wrap:wrap; text-align:center; gap:8px; margin-top:36px; }
   .principal-card { padding:24px 18px; }
   .timeline { padding-left:0; }
+  .hero-overline { font-size:0.68rem; letter-spacing:0.8px; margin-bottom:12px; }
+  .hero-overline::before { width:22px; }
+  .hero-title { margin-bottom:20px; }
+  .hero-lead { line-height:1.75; margin-bottom:22px; }
+  .hero-proof-row { max-width:100%; margin-bottom:25px; }
+  .hero-proof-row > div { padding-right:10px; margin-right:10px; }
+  .hero-proof-row strong { font-size:1.15rem; }
+  .hero-proof-row span { font-size:0.68rem; }
 }
 
 /* =============================================

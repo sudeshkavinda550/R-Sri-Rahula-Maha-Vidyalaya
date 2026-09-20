@@ -265,7 +265,7 @@ export default function Gallery() {
         title="ඡායාරූප ගැලරිය"
         subtitle="අධ්‍යයන, ක්‍රීඩා, කලා සහ සංස්කෘතික සිදුවීම්වල සුන්දර මතකයන්"
         breadcrumbs={[{ label: 'Gallery' }]}
-        bgImage="/school-bg.jpg"
+        bgImage="/img 6.jpg"
         icon={faImages}
       />
 
