@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { schoolData } from '../data/schoolData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faLocationDot, faPhone, faEnvelope, faClock } from '@fortawesome/free-solid-svg-icons';
-import { faFacebookF, faTwitter, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
 
 const quickLinks = [
   { label: 'මුල් පිටුව', to: '/' },
@@ -41,10 +41,7 @@ export default function Footer() {
               </p>
 
               <div className="footer-social mt-3">
-                <a href="#!" title="Facebook" aria-label="Facebook"><FontAwesomeIcon icon={faFacebookF} /></a>
-                <a href="#!" title="Twitter" aria-label="Twitter"><FontAwesomeIcon icon={faTwitter} /></a>
-                <a href="#!" title="Instagram" aria-label="Instagram"><FontAwesomeIcon icon={faInstagram} /></a>
-                <a href="#!" title="YouTube" aria-label="YouTube"><FontAwesomeIcon icon={faYoutube} /></a>
+                <a href="https://web.facebook.com/srirahulamaha.vidyalaya.35" target="_blank" rel="noreferrer" title="Facebook" aria-label="Facebook"><FontAwesomeIcon icon={faFacebookF} /></a>
               </div>
             </div>
           </div>
