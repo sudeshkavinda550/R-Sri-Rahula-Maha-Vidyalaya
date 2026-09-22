@@ -1526,7 +1526,12 @@ img { max-width:100%; display:block; }
 
 @media (max-width:576px) {
   .hero-section { min-height:60vh !important; padding:80px 0 40px !important; }
-  .hero-bg-slide { background-position: center 15% !important; }
+  .hero-bg-slide {
+    background-color:var(--dark-bg);
+    background-size:cover !important;
+    background-repeat:no-repeat;
+    background-position:center center !important;
+  }
   .about-img-main {
     height: 250px !important;
   }

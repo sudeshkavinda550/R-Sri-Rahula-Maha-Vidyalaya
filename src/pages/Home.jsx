@@ -49,9 +49,9 @@ export default function Home() {
   // Define image paths for your hero slideshow (user can update these)
   const heroImages = [
     '/picture 13.jpg', 
-    '/picture 14.jpg', 
-    '/picture 15.jpg', 
-    '/picture 16.jpg', 
+    '/h01.jpg', 
+    '/h02.jpg', 
+    '/img 01.jpg', 
     '/school-bg.jpg'  
   ];
 

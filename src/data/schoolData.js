@@ -57,31 +57,21 @@ export const schoolData = {
     { name: "එච්.කේ.සුනිලා ප්‍රියංගනී මිය", img: "/profile 2.png" },
     { name: "එස්.පී.ලක්මාලි මිය", img: "/profile 2.png" },
     { name: "එම්.කේ.ඩබ්.එන්.කරුණාරත්න මිය", img: "/profile 2.png" },
-    { name: "ඩී.එස්.දිසානායක මෙනෙවිය", img: "/profile 2.png" },
-    { name: "ජේ.ඩී.එස්.ආර්.දිසානායක මෙනෙවිය", img: "/profile 2.png" }
+    
   ],
 
   gallery: [
-    { url:"/picture 1.png" },
-    { url:"/picture 2.png" },
-    { url:"/picture 3.png" },
-    { url:"/picture 4.png" },
-    { url:"/picture 5.png" },
-    { url:"/picture 6.png" },
-    { url:"/picture 7.png" },
-    { url:"/picture 8.png" },
-    { url:"/picture 9.png" },
-    { url:"/picture 10.png" },
-    { url:"/picture 11.png" },
-    { url:"/picture 12.jpg" },
-    { url:"/picture 14.jpg" },
-    { url:"/picture 15.jpg" },
-    { url:"/picture 16.jpg" },
-    { url:"/picture 17.jpg" },
-    { url:"/picture 18.jpg" },
-    { url:"/picture 19.jpg" },
-    { url:"/picture 21.jpg" },
-    { url:"/picture 22.jpg" },
+   
+    { url:"/img 01.jpg" },
+    { url:"/img 02.jpg" },
+    { url:"/img 03.jpg" },
+    { url:"/img 04.jpg" },
+    { url:"/img 05.jpg" },
+    { url:"/img 06.jpg" },
+    { url:"/img 07.jpg" },
+    { url:"/img 08.jpg" },
+    { url:"/img 09.jpg" },
+    { url:"/img 10.jpg" },
   ],
 
   news: [

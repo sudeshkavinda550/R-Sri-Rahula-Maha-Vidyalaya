@@ -51,32 +51,23 @@ export default function Gallery() {
           /* Professional Responsive Grid */
           .pro-gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            grid-auto-rows: 250px;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            grid-auto-rows: auto;
             gap: 20px;
-            grid-auto-flow: dense;
+            align-items: start;
           }
 
           /* Tablet & Desktop Span handling */
           @media (min-width: 768px) {
             .pro-gallery-grid .col-span-2 { grid-column: span 2; }
             .pro-gallery-grid .row-span-2 { grid-row: span 2; }
-            .pro-gallery-grid .row-span-2 img { height: 100%; }
-
-            .pro-gallery-grid .pro-gallery-item:nth-child(5n + 1),
-            .pro-gallery-grid .pro-gallery-item:nth-child(5n + 4) {
-              grid-row: span 2;
-            }
-            .pro-gallery-grid .pro-gallery-item:nth-child(5n + 2) {
-              grid-column: span 2;
-            }
           }
 
           /* Mobile adjustments */
           @media (max-width: 767px) {
             .pro-gallery-grid {
               grid-template-columns: 1fr;
-              grid-auto-rows: 250px;
+              grid-auto-rows: auto;
             }
             .pro-gallery-grid .col-span-2,
             .pro-gallery-grid .row-span-2 {
@@ -93,14 +84,14 @@ export default function Gallery() {
             cursor: pointer;
             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
             background: #eee;
-            height: 100%;
+            height: auto;
           }
 
           .pro-gallery-item img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            height: auto;
+            object-fit: contain;
+            transition: opacity 0.3s ease;
           }
 
           .pro-gallery-overlay {
@@ -116,7 +107,7 @@ export default function Gallery() {
           }
 
           .pro-gallery-item:hover img {
-            transform: scale(1.08);
+            opacity: 0.9;
           }
 
           .pro-gallery-item:hover .pro-gallery-overlay {
