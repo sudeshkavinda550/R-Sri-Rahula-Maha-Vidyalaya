@@ -14,7 +14,7 @@ export const schoolData = {
   stats: [
     { number:60,   suffix:"+", label:"Years of Service" },
     { number:1000, suffix:"+", label:"Students Enrolled" },
-    { number:40,  suffix:"+", label:"Qualified Teachers" },
+    { number:30,  suffix:"+", label:"Qualified Teachers" },
     { number:25,   suffix:"+", label:"National Awards" },
   ],
 

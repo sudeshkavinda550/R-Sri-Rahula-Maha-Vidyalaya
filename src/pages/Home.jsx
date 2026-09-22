@@ -122,7 +122,7 @@ export default function Home() {
               <div className="hero-proof-row animate-fade-up delay-3">
                 <div><strong>{schoolData.established}</strong><span>ආරම්භය</span></div>
                 <div><strong>1000+</strong><span>සිසුන්</span></div>
-                <div><strong>40+</strong><span>ගුරු මණ්ඩලය</span></div>
+                <div><strong>30+</strong><span>ගුරු මණ්ඩලය</span></div>
               </div>
               
               <div className="d-flex flex-wrap gap-3 hero-actions animate-fade-up delay-4">
