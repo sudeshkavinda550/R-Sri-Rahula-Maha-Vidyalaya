@@ -743,7 +743,8 @@ img { max-width:100%; display:block; }
   pointer-events:none;
   z-index:0;
 }
-.logo-watermark-section > * { position:relative; z-index:1; }
+.logo-watermark-section > :not(.logo-watermark) { position:relative; z-index:1; }
+.logo-watermark-section > .logo-watermark { position:absolute; z-index:0; }
 .bg-light-custom { background:var(--light-bg) !important; }
 .bg-primary-custom { background:var(--gradient) !important; }
 .bg-dark-section  { background:var(--dark-bg) !important; }
