@@ -195,7 +195,7 @@ export default function Navbar() {
             {/* Center logo - Adjusted spacing to fit inside navbar safely */}
             <div className="nav-center-logo text-center">
               <Link to="/" className="text-decoration-none d-flex flex-column align-items-center">
-                <img src="/School logo.png" alt="School Logo" style={{ width: '45px', height: '45px', objectFit: 'contain' }} />
+                <img src="/logo.png" alt="School Logo" style={{ width: '45px', height: '45px', objectFit: 'contain' }} />
                 <span className="brand-main" style={{ marginTop: '2px' }}>ර/ශ්‍රී රාහුල මහා විද්‍යාලය</span>
               </Link>
             </div>
@@ -220,7 +220,7 @@ export default function Navbar() {
           {/* ---- MOBILE: brand + icons ---- */}
           <div className="d-flex d-lg-none align-items-center justify-content-between w-100 py-1">
             <Link to="/" className="text-decoration-none d-flex align-items-center gap-2">
-              <img src="/School logo.png" alt="School Logo" style={{ width: '40px', height: '40px', objectFit: 'contain' }} />
+              <img src="/logo.png" alt="School Logo" style={{ width: '40px', height: '40px', objectFit: 'contain' }} />
               <div>
                   <span className="brand-main" style={{ fontSize: '1rem' }}>ර/ශ්‍රී රාහුල මහා විද්‍යාලය</span>
               </div>
@@ -248,7 +248,7 @@ export default function Navbar() {
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
         <div className="d-flex align-items-center justify-content-between px-4 py-4 mb-2" style={{ borderBottom: `1px solid ${dark ? '#333' : '#eee'}` }}>
           <div className="d-flex align-items-center gap-2">
-            <img src="/School logo.png" alt="School Logo" style={{ width: 35, height: 35, objectFit: 'contain' }} />
+            <img src="/logo.png" alt="School Logo" style={{ width: 35, height: 35, objectFit: 'contain' }} />
             <span style={{ fontWeight: 800, color: dark ? '#fff' : '#000', fontSize: '1.1rem' }}>Menu</span>
           </div>
           <button 

@@ -28,7 +28,7 @@ export default function Footer() {
           <div className="col-lg-5 col-md-6">
             <div className="footer-brand">
               <div className="d-flex align-items-center gap-3 mb-3 footer-brand-row">
-                <img src="/School logo.png" alt="School Logo" className="footer-logo" />
+                <img src="/logo.png" alt="School Logo" className="footer-logo" />
                 <div>
                   <div className="school-name-footer">{schoolData.name}</div>
                   <div className="tagline">{schoolData.tagline}</div>

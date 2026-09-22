@@ -726,9 +726,31 @@ img { max-width:100%; display:block; }
    COMMON SECTION STYLES
    ============================================= */
 .inner-section { padding:88px 0; }
+.logo-watermark-section {
+  position:relative;
+  isolation:isolate;
+}
+.logo-watermark {
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:min(72vw, 680px);
+  height:auto;
+  max-height:100%;
+  transform:translate(-50%, -50%);
+  object-fit:contain;
+  opacity:0.12;
+  pointer-events:none;
+  z-index:0;
+}
+.logo-watermark-section > * { position:relative; z-index:1; }
 .bg-light-custom { background:var(--light-bg) !important; }
 .bg-primary-custom { background:var(--gradient) !important; }
 .bg-dark-section  { background:var(--dark-bg) !important; }
+
+@media (max-width:767px) {
+  .logo-watermark { width:min(86vw, 420px); }
+}
 
 .section-badge {
   display:inline-block;

@@ -31,7 +31,8 @@ export default function About() {
       />
 
       {/* Main About */}
-      <section className="inner-section">
+      <section className="inner-section logo-watermark-section">
+        <img className="logo-watermark" src="/logo.png" alt="" aria-hidden="true" />
         <div className="container">
           <div className="row g-5 align-items-center">
             <Reveal className="col-lg-5" delay={0.05}>
@@ -54,7 +55,8 @@ export default function About() {
       </section>
 
       {/* Features */}
-      <section className="inner-section bg-light-custom">
+      <section className="inner-section bg-light-custom logo-watermark-section">
+        <img className="logo-watermark" src="/logo.png" alt="" aria-hidden="true" />
         <div className="container">
           <Reveal className="text-center mb-5">
             <h2 className="section-title">අපේ විශේෂත්වයන්</h2>

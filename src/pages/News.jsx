@@ -66,7 +66,7 @@ export default function News() {
         .news-page-highlights li::marker { color: var(--secondary); }
         @media (max-width: 767px) { .news-page-section { padding: 50px 0 64px; } .news-page-grid { grid-template-columns: 1fr; gap: 24px; } .news-page-image-box { height: 240px; } .news-page-body { padding: 22px 20px 25px; } .news-page-body h2 { font-size: 1.08rem; } }
       `}</style>
-      <section className="news-page-section"><div className="container">
+      <section className="news-page-section logo-watermark-section"><img className="logo-watermark" src="/logo.png" alt="" aria-hidden="true" /><div className="container">
         <div className="news-page-intro"><h2>අපේ නවතම පුවත්</h2><div className="divider-line mx-auto" /><p>විද්‍යාලීය ප්‍රජාවේ ජයග්‍රහණ සහ වැදගත් අවස්ථා පිළිබඳ නවතම තොරතුරු මෙතැනින් දැනගන්න.</p></div>
         <div className="news-page-grid">{schoolData.news.map((item, index) => <NewsCard key={item.title} item={item} index={index} />)}</div>
       </div></section>

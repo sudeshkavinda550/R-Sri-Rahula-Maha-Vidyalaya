@@ -112,7 +112,7 @@ export default function VisionMission() {
       />
 
       <section 
-        className="inner-section"
+        className="inner-section logo-watermark-section"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('picture 20.jpg')`,
           backgroundSize: 'cover',
@@ -126,6 +126,7 @@ export default function VisionMission() {
           overflow: 'hidden'
         }}
       >
+        <img className="logo-watermark" src="/logo.png" alt="" aria-hidden="true" />
         <div className="container">
           <Reveal>
             <div 

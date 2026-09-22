@@ -35,7 +35,8 @@ export default function Anthem() {
         icon={faMusic}
       />
 
-      <section style={{ background: 'linear-gradient(rgba(10, 27, 44, 0.78), rgba(10, 27, 44, 0.88)), url("/school%20logo%202.jpg") center/cover no-repeat', padding: '88px 0', position: 'relative', overflow: 'hidden', minHeight: '60vh' }}>
+      <section className="logo-watermark-section" style={{ background: 'linear-gradient(rgba(10, 27, 44, 0.78), rgba(10, 27, 44, 0.88)), url("/school%20logo%202.jpg") center/cover no-repeat', padding: '88px 0', position: 'relative', overflow: 'hidden', minHeight: '60vh' }}>
+        <img className="logo-watermark" src="/logo.png" alt="" aria-hidden="true" />
         <div style={{ position: 'absolute', inset: 0, background: "url(\"data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3C/g%3E%3C/svg%3E\")" }} />
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div className="text-center mb-5">
