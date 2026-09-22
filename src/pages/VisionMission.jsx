@@ -114,10 +114,7 @@ export default function VisionMission() {
       <section 
         className="inner-section logo-watermark-section"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('picture 20.jpg')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
+          background: 'linear-gradient(135deg, #0a1b2c, #1a3a6b)',
           minHeight: '70vh', 
           display: 'flex',
           alignItems: 'center',
