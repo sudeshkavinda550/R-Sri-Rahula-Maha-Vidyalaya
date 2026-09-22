@@ -824,18 +824,10 @@ img { max-width:100%; display:block; }
    ABOUT PAGE
    ============================================= */
 .about-center-logo {
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  margin: -18px auto 10px;
-  padding: 0 20px;
+  display:none;
 }
 .about-center-logo img {
-  width:clamp(120px, 18vw, 200px);
-  height:auto;
-  opacity:0.18;
-  object-fit:contain;
-  filter:drop-shadow(0 8px 18px rgba(26,58,107,0.12));
+  display:none;
 }
 
 .about-img-multi { position:relative; padding-bottom:36px; padding-right:36px; }
