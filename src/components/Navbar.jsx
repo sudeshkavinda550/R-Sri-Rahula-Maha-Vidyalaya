@@ -14,7 +14,6 @@ const rightLinks = [
   { label:'News',      path:'/news' },
   { label:'Staff',     path:'/staff' },
   { label:'Gallery',   path:'/gallery' },
-  { label:'Anthem',    path:'/anthem' },
   { label:'Contact',   path:'/contact' },
 ];
 
