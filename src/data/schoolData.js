@@ -5,9 +5,8 @@ export const schoolData = {
   taglineEn: "Knowledge Makes Life Successful",
   established: "1959",
   address:   "Lellopitiya, Rathnapura, 70059 Sri Lanka",
-  phones:    ["+94 11 234 5678", "+94 11 234 5679", "+94 11 234 5680"],
-  email:     "info@srirahulamv.lk",
-  website:   "www.srirahulamv.lk",
+  phones:    ["0452221379"],
+  email:     "srirahula123@gmail.com",
 
   principalMessage: "ශ්‍රී රාහුල මහා විද්‍යාලයේ අපගේ සිසුන් ශ්‍රී ලංකාවේ පොහොසත් සමාජ-සංස්කෘතික පරිසරය තුළ හැදී වැඩෙයි. අධ්‍යයන කටයුතු සහ විෂය සමගාමී ක්‍රියාකාරකම් අතර සමතුලිතතාවයක් අපි දිරිමත් කරන අතර, අපගේ සිසුන්ට අසංඛ්‍යාත අවස්ථාවන් සඳහා දොරටු විවර කරන ජාතික විෂයමාලා ධාරාවන් දෙකම අපි ලබා දෙන්නෙමු.",
 

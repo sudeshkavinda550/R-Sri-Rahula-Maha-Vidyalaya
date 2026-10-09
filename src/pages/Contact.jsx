@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PageHeader from '../components/PageHeader';
 import { schoolData } from '../data/schoolData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt, faPhone, faEnvelope, faGlobe, faPaperPlane, faAddressBook } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt, faPhone, faEnvelope, faPaperPlane, faAddressBook } from '@fortawesome/free-solid-svg-icons';
 import useReveal from '../hooks/useReveal';
 
 export default function Contact() {
@@ -57,13 +57,6 @@ export default function Contact() {
                   <div>
                     <h6>විද්‍යුත් තැපෑල</h6>
                     <p>{schoolData.email}</p>
-                  </div>
-                </div>
-                <div className="contact-info-item">
-                  <div className="contact-icon"><FontAwesomeIcon icon={faGlobe} /></div>
-                  <div>
-                    <h6>වෙබ් අඩවිය</h6>
-                    <p>{schoolData.website}</p>
                   </div>
                 </div>
                 <div style={{ borderRadius: 12, overflow: 'hidden', marginTop: 16, height: 250, border: '1px solid rgba(255,255,255,0.15)', boxShadow: '0 8px 24px rgba(0,0,0,0.15)' }}>
